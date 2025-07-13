@@ -1,6 +1,6 @@
 {
   "name": "ds-find-shell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool to translate natural language to shell script using DeepSeek AI",
   "main": "dist/ds-find-shell.js",
   "bin": {

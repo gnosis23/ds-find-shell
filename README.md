@@ -1,41 +1,80 @@
 # DS Find Shell
 
-一个基于 DeepSeek AI 的 Shell 翻译工具，将自然语言描述转换为可执行的 shell 命令。
+A shell translation tool powered by DeepSeek AI that converts natural language descriptions into executable shell commands.
 
-## 安装
+## Installation
 
 ```bash
 npm install -g ds-find-shell
 ```
 
-## 配置
+## Configuration
 
-使用前需要设置 DeepSeek API Key：
+Set up your DeepSeek API key before using:
 
 ```bash
 export DEEPSEEK_API_KEY="your-deepseek-api-key"
 ```
 
-## 使用方法
+You can get your API key from [DeepSeek Platform](https://platform.deepseek.com/).
+
+## Usage
 
 ```bash
-ds-find-shell "找到当前目录下最大的文件"
-ds-find-shell "列出当前日期，如 2025-07-13 21:00:00"
-ds-find-shell "查看系统内存使用情况"
+ds-find-shell "find the largest file in current directory"
+ds-find-shell "show current date and time like 2025-07-13 21:00:00"
+ds-find-shell "check system memory usage"
 ```
 
-## 功能特点
+## Features
 
-- 🤖 基于 DeepSeek AI 的智能翻译
-- 💬 自然语言转 Shell 命令
-- 🔒 执行前确认机制
-- 📦 轻量级，无额外依赖
+- 🤖 **AI-Powered Translation**: Leverages DeepSeek AI for intelligent command generation
+- 💬 **Natural Language Processing**: Convert plain English to shell commands
+- 🔒 **Safety First**: Confirmation prompt before executing commands
+- 📦 **Lightweight**: Minimal dependencies for fast installation
+- 🌐 **Cross-Platform**: Works on macOS, Linux, and Windows (with WSL)
 
-## 要求
+## Requirements
 
-- Node.js >= 16.0.0
+- Node.js >= 20.0.0
 - DeepSeek API Key
 
-## 许可证
+## How It Works
+
+1. Input your request in natural language
+2. The tool sends your request to DeepSeek AI
+3. AI generates the appropriate shell command
+4. You can review and confirm before execution
+5. The command runs in your terminal
+
+## Examples
+
+### File Operations
+```bash
+ds-find-shell "find all .js files modified in the last 7 days"
+ds-find-shell "compress all images in current folder"
+```
+
+### System Information
+```bash
+ds-find-shell "show disk usage by directory"
+ds-find-shell "list running processes sorted by memory usage"
+```
+
+### Development Tasks
+```bash
+ds-find-shell "find all TODO comments in my code"
+ds-find-shell "count lines of code in this project"
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
 
 MIT
+
+## Support
+
+If you encounter any issues or have questions, please [open an issue](https://github.com/gnosis23/ds-find-shell/issues) on GitHub.
