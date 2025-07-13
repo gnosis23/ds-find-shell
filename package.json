@@ -1,20 +1,51 @@
 {
-  "name": "find-shell",
+  "name": "ds-find-shell",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a tool to translate natural language to shell script using DeepSeek AI",
+  "main": "dist/ds-find-shell.js",
   "bin": {
-    "find-shell": "bin/find-shell.js"
+    "ds-find-shell": "dist/ds-find-shell.js"
   },
   "type": "module",
   "scripts": {
-    "start": "node bin/find-shell.js"
+    "start": "node src/cli.js",
+    "build": "bash build.sh",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "echo 'No tests specified'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "shell",
+    "cli",
+    "ai",
+    "deepseek",
+    "command-line",
+    "natural-language",
+    "shell-script",
+    "automation"
+  ],
+  "author": "bhwang <bj050323@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnosis23/ds-find-shell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gnosis23/ds-find-shell/issues"
+  },
+  "homepage": "https://github.com/gnosis23/ds-find-shell#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "dist/ds-find-shell.js",
+    "README.md"
+  ],
   "packageManager": "pnpm@10.12.3",
   "dependencies": {
     "inquirer": "^12.7.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
   }
 }

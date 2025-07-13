@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import process from 'process';
 import { exec } from 'child_process';
 import inquirer from 'inquirer';
@@ -80,15 +81,23 @@ async function translateWithDeepSeek(description) {
   }
 }
 
-export async function main() {
+async function main() {
   const args = process.argv.slice(2);
 
   // 验证参数数量
   if (args.length < 1) {
-    console.log('Usage: find-shell <description>');
+    console.log('Usage: ds-find-shell <description>');
     process.exit(1);
   }
 
   const description = args[0];
   await translateWithDeepSeek(description);
+}
+
+// 运行主函数
+try {
+  await main();
+} catch (error) {
+  console.error(error.message);
+  process.exit(1);
 }

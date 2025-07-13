@@ -1,0 +1,38 @@
+# Development files
+.git/
+.gitignore
+.DS_Store
+*.log
+node_modules/
+coverage/
+.nyc_output/
+
+# Source files (we only publish the bundled version)
+src/
+bin/
+index.js
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Test files
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# Build artifacts (except our main dist file)
+tmp/
+
+# Lock files (keep pnpm-lock.yaml for reproducible builds)
+package-lock.json
+yarn.lock 
