@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "git-summary": "bin/git-summary.js"
+  },
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bin/git-summary.js"
   },
   "keywords": [],
   "author": "",

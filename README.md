@@ -14,6 +14,15 @@
 pnpm install
 ```
 
+## DEV
+
+```bash
+npm link
+
+# uninstall
+npm uninstall -g git-summary
+```
+
 ## 使用方法
 
 ### 1. 设置 DeepSeek API Key

@@ -78,7 +78,7 @@ async function summarizeWithDeepSeek(commits) {
   }
 }
 
-async function main() {
+export async function main() {
   const args = process.argv.slice(2);
 
   // 验证参数数量
@@ -130,11 +130,4 @@ async function main() {
     }
     throw error;
   }
-}
-
-try {
-  await main();
-} catch (error) {
-  console.error(error.message);
-  process.exit(1);
 }
