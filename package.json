@@ -14,5 +14,7 @@
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.12.3",
-  "dependencies": {}
+  "dependencies": {
+    "inquirer": "^12.7.0"
+  }
 }

@@ -1,4 +1,6 @@
 import process from 'process';
+import { exec } from 'child_process';
+import inquirer from 'inquirer';
 
 // 调用 DeepSeek API 总结工作
 async function translateWithDeepSeek(description) {
@@ -48,7 +50,30 @@ async function translateWithDeepSeek(description) {
     const data = await response.json();
     const shellScript = data.choices[0].message.content;
 
-    console.log(shellScript);
+    console.log(`> ${shellScript}`);
+
+    // ask user whether to execute the shell script
+    const execute = await inquirer.prompt([
+      {
+        type: 'confirm',
+        name: 'execute',
+        message: 'Do you want to execute the shell script?'
+      }
+    ]);
+
+    if (execute.execute) {
+      exec(shellScript, (error, stdout, stderr) => {
+        if (error) {
+          console.error(`> Error: ${error.message}`);
+        }
+        if (stderr) {
+          console.error(`> Stderr: ${stderr}`);
+        }
+        if (stdout) {
+          console.log(`> ${stdout}`);
+        }
+      });
+    }
 
   } catch (error) {
     console.error('Call DeepSeek API failed:', error.message);
