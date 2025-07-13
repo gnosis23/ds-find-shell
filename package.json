@@ -1,21 +1,18 @@
 {
-  "name": "git-summary",
+  "name": "find-shell",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "git-summary": "bin/git-summary.js"
+    "find-shell": "bin/find-shell.js"
   },
   "type": "module",
   "scripts": {
-    "start": "node bin/git-summary.js"
+    "start": "node bin/find-shell.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.12.3",
-  "dependencies": {
-    "simple-git": "^3.28.0",
-    "zod": "^4.0.5"
-  }
+  "dependencies": {}
 }
