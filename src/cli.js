@@ -1,7 +1,21 @@
-#!/usr/bin/env node
 import process from 'process';
 import { exec } from 'child_process';
-import inquirer from 'inquirer';
+import { createInterface } from 'readline';
+
+// 简单的确认函数
+function askConfirmation(question) {
+  return new Promise((resolve) => {
+    const rl = createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    rl.question(question + ' (y/n): ', (answer) => {
+      rl.close();
+      resolve(answer.toLowerCase() === 'y' || answer.toLowerCase() === 'yes');
+    });
+  });
+}
 
 // 调用 DeepSeek API 总结工作
 async function translateWithDeepSeek(description) {
@@ -54,15 +68,9 @@ async function translateWithDeepSeek(description) {
     console.log(`> ${shellScript}`);
 
     // ask user whether to execute the shell script
-    const execute = await inquirer.prompt([
-      {
-        type: 'confirm',
-        name: 'execute',
-        message: 'Do you want to execute the shell script?'
-      }
-    ]);
+    const execute = await askConfirmation('Do you want to execute the shell script?');
 
-    if (execute.execute) {
+    if (execute) {
       exec(shellScript, (error, stdout, stderr) => {
         if (error) {
           console.error(`> Error: ${error.message}`);

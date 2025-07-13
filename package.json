@@ -1,6 +1,6 @@
 {
   "name": "ds-find-shell",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a tool to translate natural language to shell script using DeepSeek AI",
   "main": "dist/ds-find-shell.js",
   "bin": {
@@ -42,9 +42,7 @@
     "README.md"
   ],
   "packageManager": "pnpm@10.12.3",
-  "dependencies": {
-    "inquirer": "^12.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "esbuild": "^0.20.0"
   }
