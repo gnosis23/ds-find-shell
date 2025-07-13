@@ -1,0 +1,17 @@
+{
+  "name": "git-summary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.3",
+  "dependencies": {
+    "simple-git": "^3.28.0"
+  }
+}
