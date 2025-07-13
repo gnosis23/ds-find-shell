@@ -12,6 +12,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.12.3",
   "dependencies": {
-    "simple-git": "^3.28.0"
+    "simple-git": "^3.28.0",
+    "zod": "^4.0.5"
   }
 }

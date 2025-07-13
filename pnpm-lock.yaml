@@ -11,6 +11,9 @@ importers:
       simple-git:
         specifier: ^3.28.0
         version: 3.28.0
+      zod:
+        specifier: ^4.0.5
+        version: 4.0.5
 
 packages:
 
@@ -35,6 +38,9 @@ packages:
   simple-git@3.28.0:
     resolution: {integrity: sha512-Rs/vQRwsn1ILH1oBUy8NucJlXmnnLeLCfcvbSehkPzbv3wwoFWIdtfd6Ndo6ZPhlPsCZ60CPI4rxurnwAa+a2w==}
 
+  zod@4.0.5:
+    resolution: {integrity: sha512-/5UuuRPStvHXu7RS+gmvRf4NXrNxpSllGwDnCBcJZtQsKrviYXm54yDGV2KYNLT5kq0lHGcl7lqWJLgSaG+tgA==}
+
 snapshots:
 
   '@kwsites/file-exists@1.1.1':
@@ -58,3 +64,5 @@ snapshots:
       debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
+
+  zod@4.0.5: {}
